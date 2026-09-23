@@ -4,7 +4,7 @@ import { useState } from "react";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navItems = ["Home", "About", "service", "Skills", "Projects", "Contact"];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#0a0a0a]/90 backdrop-blur-xl">
