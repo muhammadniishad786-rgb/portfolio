@@ -1,4 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
+import resume from "../assets/Nishad_MERN_Developer.pdf"
 
 function Hero() {
   return (
@@ -145,7 +146,7 @@ function Hero() {
 
               {/* Resume */}
               <a
-                href="/resume.pdf"
+                href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-full border border-orange-500/70 px-7 py-3.5 text-sm font-semibold text-orange-400 transition duration-300 hover:-translate-y-1 hover:bg-orange-500/10 hover:text-orange-300"
