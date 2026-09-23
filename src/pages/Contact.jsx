@@ -179,14 +179,14 @@ function Contact() {
                   </p>
 
                   <p className="mt-1 truncate text-sm font-medium text-gray-300 group-hover:text-orange-400">
-                    your-email@example.com
+                    muhammadniishad786@gmail.com
                   </p>
                 </div>
               </a>
 
               {/* Phone */}
               <a
-                href="tel:+910000000000"
+                href="tel:+9778580349"
                 className="group mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4 transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.04]"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
@@ -199,7 +199,7 @@ function Contact() {
                   </p>
 
                   <p className="mt-1 text-sm font-medium text-gray-300 group-hover:text-orange-400">
-                    +91 XXXXX XXXXX
+                    +91 9778580349
                   </p>
                 </div>
               </a>
