@@ -1,5 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
-import resume from "../assets/Nishad_MERN_Developer.pdf"
+import resume from "../assets/Nishad_MERN_Developer_.pdf"
 
 function Hero() {
   return (
