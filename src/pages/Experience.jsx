@@ -51,6 +51,7 @@ function Experience() {
         "Axios",
         "Tailwind CSS",
         "Git & GitHub",
+        "figma"
       ],
     },
   ];

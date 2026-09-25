@@ -58,57 +58,58 @@ function Projects() {
     {
       featured: false,
       number: "02",
-      title: "Project Two",
+      title: "ironMind:- Pending Project",
       category: "React Application",
 
       description:
-        "A modern React application focused on responsive interfaces, reusable components and clean frontend architecture.",
+        "AI-powered fitness platform built with the MERN stack for creating workouts, tracking sets, reps, weight, workout history, and personalized fitness progress.",
 
-      image: "/project-2.png",
+      image: "/projectPending.png",
 
       technologies: [
         "React",
-        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redux Toolkit",
         "Tailwind CSS",
-        "Axios",
       ],
 
       features: [
-        "Responsive Design",
-        "Reusable Components",
+        "jwt authentication",
         "API Integration",
       ],
 
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/muhammadniishad786-rgb/ironMind",
     },
 
-    {
-      featured: false,
-      number: "03",
-      title: "Project Three",
-      category: "Web Application",
+    // {
+    //   featured: false,
+    //   number: "03",
+    //   title: "Project Three",
+    //   category: "Web Application",
 
-      description:
-        "A responsive web application designed with a focus on usability, clean interfaces and modern development practices.",
+    //   description:
+    //     "A responsive web application designed with a focus on usability, clean interfaces and modern development practices.",
 
-      image: "/project-3.png",
+    //   image: "/project-3.png",
 
-      technologies: [
-        "React",
-        "JavaScript",
-        "Tailwind CSS",
-      ],
+    //   technologies: [
+    //     "React",
+    //     "JavaScript",
+    //     "Tailwind CSS",
+    //   ],
 
-      features: [
-        "Responsive UI",
-        "Modern Design",
-        "Component Architecture",
-      ],
+    //   features: [
+    //     "Responsive UI",
+    //     "Modern Design",
+    //     "Component Architecture",
+    //   ],
 
-      liveLink: "#",
-      githubLink: "#",
-    },
+    //   liveLink: "#",
+    //   githubLink: "#",
+    // },
   ];
 
   return (

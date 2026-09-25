@@ -55,6 +55,7 @@ function Skills() {
       skills: [
         "GitHub",
         "Postman",
+        "figma",
         "VS Code",
         "Axios",
         "Render",
