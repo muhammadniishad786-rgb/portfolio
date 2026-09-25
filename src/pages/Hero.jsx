@@ -91,7 +91,7 @@ function Hero() {
 
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/muhammad.nishad_/"
                 aria-label="Instagram"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-orange-500/60 bg-orange-500/5 text-orange-400 transition duration-300 hover:-translate-y-1 hover:border-orange-500 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_20px_rgba(249,115,22,0.45)]"
               >
