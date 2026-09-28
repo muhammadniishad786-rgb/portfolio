@@ -80,7 +80,7 @@ function Projects() {
         "API Integration",
       ],
 
-      liveLink: "#",
+      liveLink: "https://ironmind-1-ged6.onrender.com",
       githubLink: "https://github.com/muhammadniishad786-rgb/ironMind",
     },
 
