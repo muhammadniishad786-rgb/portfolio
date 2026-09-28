@@ -1,9 +1,4 @@
-import {
-  ExternalLink,
-  ArrowUpRight,
-  ShoppingBag,
-  Code2,
-} from "lucide-react";
+import { ExternalLink, ArrowUpRight, ShoppingBag, Code2 } from "lucide-react";
 
 function GitHubIcon({ size = 18 }) {
   return (
@@ -58,26 +53,35 @@ function Projects() {
     {
       featured: false,
       number: "02",
-      title: "ironMind:- Pending Project",
-      category: "React Application",
+      title: "IronMind",
+      category: "MERN Stack Application",
 
       description:
-        "AI-powered fitness platform built with the MERN stack for creating workouts, tracking sets, reps, weight, workout history, and personalized fitness progress.",
+        "AI-powered fitness tracking platform built with the MERN stack to create and manage workouts, track exercises, sets, reps, weight, workout history, and personalized fitness progress.",
 
-      image: "/projectPending.png",
+      image: "/IronMindLogo.png",
 
       technologies: [
         "React",
         "Node.js",
         "Express.js",
         "MongoDB",
+        "Mongoose",
         "Redux Toolkit",
         "Tailwind CSS",
+        "OpenAI API- soon",
+        "JWT",
       ],
 
       features: [
-        "jwt authentication",
-        "API Integration",
+        "JWT-based authentication",
+        "Workout creation and management",
+        "Exercise and workout tracking",
+        "Sets, reps, weight, and rest-time tracking",
+        "Workout history and progress tracking",
+        "AI-powered fitness assistance- soon",
+        "REST API integration",
+        "Responsive dashboard UI",
       ],
 
       liveLink: "https://ironmind-1-ged6.onrender.com",
@@ -124,21 +128,16 @@ function Projects() {
       <div className="pointer-events-none absolute -right-40 bottom-20 h-[450px] w-[450px] rounded-full bg-amber-500/10 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
         {/* ================= HEADER ================= */}
 
         <div className="mb-16 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-
           <div className="max-w-2xl">
-
             <div className="mb-4 flex items-center gap-3">
-
               <span className="h-[2px] w-10 bg-gradient-to-r from-orange-500 to-amber-500" />
 
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
                 My Work
               </span>
-
             </div>
 
             <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -152,38 +151,26 @@ function Projects() {
               Here are some of the projects I've built while developing my
               skills in full-stack web development.
             </p>
-
           </div>
 
           <div className="flex items-center gap-2 text-sm text-gray-500">
-
-            <Code2
-              size={17}
-              className="text-orange-500"
-            />
-
+            <Code2 size={17} className="text-orange-500" />
             MERN Stack Projects
-
           </div>
-
         </div>
 
         {/* ================= PROJECT LIST ================= */}
 
         <div className="space-y-8">
-
           {projects.map((project) => (
             <div
               key={project.number}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:border-orange-500/40"
             >
-
               <div className="grid grid-cols-1 lg:grid-cols-2">
-
                 {/* ================= PROJECT IMAGE ================= */}
 
                 <div className="relative min-h-[280px] overflow-hidden bg-neutral-950 sm:min-h-[360px]">
-
                   <img
                     src={project.image}
                     alt={`${project.title} project`}
@@ -209,43 +196,33 @@ function Projects() {
                   <div className="absolute bottom-6 left-6 rounded-full border border-white/10 bg-black/60 px-4 py-2 text-xs font-medium text-gray-300 backdrop-blur-md">
                     {project.category}
                   </div>
-
                 </div>
 
                 {/* ================= PROJECT CONTENT ================= */}
 
                 <div className="relative flex flex-col justify-center p-7 sm:p-9 lg:p-12">
-
                   {/* Content Glow */}
 
                   <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                   <div className="relative">
-
                     {/* Title */}
 
                     <div className="flex items-start justify-between gap-5">
-
                       <div>
-
                         <div className="mb-3 flex items-center gap-2 text-sm font-medium text-orange-400">
-
                           <ShoppingBag size={16} />
-
                           Featured Project
-
                         </div>
 
                         <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
                           {project.title}
                         </h3>
-
                       </div>
 
                       <span className="hidden text-5xl font-extrabold text-white/[0.04] sm:block">
                         {project.number}
                       </span>
-
                     </div>
 
                     {/* Description */}
@@ -257,13 +234,11 @@ function Projects() {
                     {/* ================= FEATURES ================= */}
 
                     <div className="mt-7">
-
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                         Key Features
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-
                         {project.features.map((feature) => (
                           <span
                             key={feature}
@@ -272,21 +247,17 @@ function Projects() {
                             {feature}
                           </span>
                         ))}
-
                       </div>
-
                     </div>
 
                     {/* ================= TECHNOLOGIES ================= */}
 
                     <div className="mt-7">
-
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                         Built With
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-
                         {project.technologies.map((technology) => (
                           <span
                             key={technology}
@@ -295,15 +266,12 @@ function Projects() {
                             {technology}
                           </span>
                         ))}
-
                       </div>
-
                     </div>
 
                     {/* ================= LINKS ================= */}
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
-
                       {/* Live Demo */}
 
                       <a
@@ -313,12 +281,10 @@ function Projects() {
                         className="group/link inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(249,115,22,0.2)] transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-amber-600 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
                       >
                         Live Demo
-
                         <ExternalLink
                           size={16}
                           className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
                         />
-
                       </a>
 
                       {/* GitHub */}
@@ -330,34 +296,24 @@ function Projects() {
                         className="inline-flex items-center gap-2 rounded-full border border-orange-500/50 px-5 py-3 text-sm font-semibold text-orange-400 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500/10 hover:text-orange-300"
                       >
                         GitHub
-
                         <GitHubIcon size={17} />
-
                       </a>
-
                     </div>
-
                   </div>
 
                   {/* Bottom Accent */}
 
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
 
         {/* ================= BOTTOM CTA ================= */}
 
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
-
           <div>
-
             <p className="text-sm font-semibold text-gray-300">
               More projects coming soon.
             </p>
@@ -365,7 +321,6 @@ function Projects() {
             <p className="mt-1 text-sm text-gray-500">
               I'm continuously building and improving my development skills.
             </p>
-
           </div>
 
           <a
@@ -373,16 +328,12 @@ function Projects() {
             className="group inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-colors hover:text-orange-300"
           >
             Get in touch
-
             <ArrowUpRight
               size={17}
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
-
           </a>
-
         </div>
-
       </div>
     </section>
   );
