@@ -54,6 +54,7 @@ function Skills() {
       description: "Using modern tools to build and manage projects.",
       skills: [
         "GitHub",
+        "git",
         "Postman",
         "figma",
         "VS Code",
