@@ -63,7 +63,7 @@ function Projects() {
       category: "MERN Stack Application",
 
       description:
-        "AI-powered fitness tracking platform built with the MERN stack to create and manage workouts, track exercises, sets, reps, weight, workout history, and personalized fitness progress.",
+        "Fitness tracking platform built with the MERN stack to create and manage workouts, track exercises, sets, reps, weight, workout history, and personalized fitness progress.",
 
       image: "/IronMindLogo.png",
 
