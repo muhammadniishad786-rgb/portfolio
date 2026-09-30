@@ -9,8 +9,8 @@ import {
   CheckCircle2,
   AlertCircle,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { sendContactMessage } from "../services/contactApi";
-
 
 function GitHubIcon({ size = 19 }) {
   return (
@@ -88,7 +88,6 @@ function Contact() {
         response.data.message || "Your message was sent successfully!"
       );
 
-      // Clear form
       form.reset();
     } catch (error) {
       console.error("Contact form error:", error);
@@ -107,26 +106,54 @@ function Contact() {
       id="contact"
       className="relative overflow-hidden bg-[#0a0a0a] px-6 py-24 text-white sm:py-28"
     >
-      {/* Background Glow */}
+      {/* ================= BACKGROUND GLOW ================= */}
+
       <div className="pointer-events-none absolute -left-40 top-20 h-[400px] w-[400px] rounded-full bg-orange-600/10 blur-[150px]" />
 
       <div className="pointer-events-none absolute -right-40 bottom-10 h-[400px] w-[400px] rounded-full bg-amber-500/10 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
+        {/* ================= HEADER ================= */}
 
-        {/* Header */}
-        <div className="mb-16 text-center">
-
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mb-16 text-center"
+        >
           <div className="mb-4 flex items-center justify-center gap-3">
-
-            <span className="h-[2px] w-10 bg-gradient-to-r from-orange-500 to-amber-500" />
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: 40 }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+              }}
+              transition={{ duration: 0.6 }}
+              className="h-[2px] bg-gradient-to-r from-orange-500 to-amber-500"
+            />
 
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
               Get In Touch
             </span>
 
-            <span className="h-[2px] w-10 bg-gradient-to-r from-amber-500 to-orange-500" />
-
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: 40 }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+              }}
+              transition={{ duration: 0.6 }}
+              className="h-[2px] bg-gradient-to-r from-amber-500 to-orange-500"
+            />
           </div>
 
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -140,297 +167,365 @@ function Contact() {
             I'm open to opportunities, collaborations and interesting web
             development projects. Feel free to reach out.
           </p>
+        </motion.div>
 
-        </div>
+        {/* ================= MAIN GRID ================= */}
 
-        {/* Main Grid */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
+          {/* ================= LEFT SIDE ================= */}
 
-          {/* Left Side */}
-          <div className="lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{
+              once: false,
+              amount: 0.15,
+            }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="lg:col-span-2"
+          >
+            <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9">
+              {/* Glow */}
 
-            <div className="h-full rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9">
+              <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
-                Contact Information
-              </p>
-
-              <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
-                Have a project in mind?
-              </h3>
-
-              <p className="mt-4 text-sm leading-7 text-gray-500">
-                Whether you're looking for a developer, have a project idea,
-                or simply want to connect, I'd be happy to hear from you.
-              </p>
-
-              {/* Email */}
-              <a
-                href="mailto:your-email@example.com"
-                className="group mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4 transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.04]"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
-                  <Mail size={19} />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-xs text-gray-500">
-                    Email
-                  </p>
-
-                  <p className="mt-1 truncate text-sm font-medium text-gray-300 group-hover:text-orange-400">
-                    muhammadniishad786@gmail.com
-                  </p>
-                </div>
-              </a>
-
-              {/* Phone */}
-              <a
-                href="tel:+9778580349"
-                className="group mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4 transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.04]"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
-                  <Phone size={19} />
-                </div>
-
-                <div>
-                  <p className="text-xs text-gray-500">
-                    Phone
-                  </p>
-
-                  <p className="mt-1 text-sm font-medium text-gray-300 group-hover:text-orange-400">
-                    +91 9778580349
-                  </p>
-                </div>
-              </a>
-
-              {/* Location */}
-              <div className="mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4">
-
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
-                  <MapPin size={19} />
-                </div>
-
-                <div>
-                  <p className="text-xs text-gray-500">
-                    Location
-                  </p>
-
-                  <p className="mt-1 text-sm font-medium text-gray-300">
-                    Kerala, India
-                  </p>
-                </div>
-
-              </div>
-
-              {/* Social Media */}
-              <div className="mt-8 border-t border-white/10 pt-7">
-
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
-                  Connect With Me
-                </p>
-
-                <div className="flex gap-3">
-
-                  {/* GitHub */}
-                  <a
-                    href="https://github.com/muhammadniishad786-rgb"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
-                  >
-                    <GitHubIcon size={19} />
-                  </a>
-
-                  {/* LinkedIn */}
-                  <a
-                    href="YOUR_LINKEDIN_URL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
-                  >
-                    <LinkedInIcon size={18} />
-                  </a>
-
-                  {/* Instagram */}
-                  <a
-                    href="YOUR_INSTAGRAM_URL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
-                  >
-                    <InstagramIcon size={19} />
-                  </a>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Right Side */}
-          <div className="lg:col-span-3">
-
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9"
-            >
-
-              <div className="mb-7">
-
+              <div className="relative">
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
-                  Send a Message
+                  Contact Information
                 </p>
 
-                <h3 className="mt-3 text-2xl font-bold text-white">
-                  Tell me about your project
+                <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
+                  Have a project in mind?
                 </h3>
 
+                <p className="mt-4 text-sm leading-7 text-gray-500">
+                  Whether you're looking for a developer, have a project idea,
+                  or simply want to connect, I'd be happy to hear from you.
+                </p>
+
+                {/* Email */}
+
+                <motion.a
+                  whileHover={{ x: 5 }}
+                  href="mailto:muhammadniishad786@gmail.com"
+                  className="group mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4 transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.04]"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
+                    <Mail size={19} />
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="text-xs text-gray-500">Email</p>
+
+                    <p className="mt-1 truncate text-sm font-medium text-gray-300 group-hover:text-orange-400">
+                      muhammadniishad786@gmail.com
+                    </p>
+                  </div>
+                </motion.a>
+
+                {/* Phone */}
+
+                <motion.a
+                  whileHover={{ x: 5 }}
+                  href="tel:+919778580349"
+                  className="group mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4 transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.04]"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
+                    <Phone size={19} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-gray-500">Phone</p>
+
+                    <p className="mt-1 text-sm font-medium text-gray-300 group-hover:text-orange-400">
+                      +91 9778580349
+                    </p>
+                  </div>
+                </motion.a>
+
+                {/* Location */}
+
+                <div className="mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 text-orange-400">
+                    <MapPin size={19} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-gray-500">Location</p>
+
+                    <p className="mt-1 text-sm font-medium text-gray-300">
+                      Kerala, India
+                    </p>
+                  </div>
+                </div>
+
+                {/* Social Media */}
+
+                <div className="mt-8 border-t border-white/10 pt-7">
+                  <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
+                    Connect With Me
+                  </p>
+
+                  <div className="flex gap-3">
+                    {/* GitHub */}
+
+                    <motion.a
+                      whileHover={{ y: -5, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      href="https://github.com/muhammadniishad786-rgb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
+                    >
+                      <GitHubIcon size={19} />
+                    </motion.a>
+
+                    {/* LinkedIn */}
+
+                    <motion.a
+                      whileHover={{ y: -5, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      href="https://www.linkedin.com/in/muhammad-nishad-849197439/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
+                    >
+                      <LinkedInIcon size={18} />
+                    </motion.a>
+
+                    {/* Instagram */}
+
+                    <motion.a
+                      whileHover={{ y: -5, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      href="YOUR_INSTAGRAM_URL"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-gray-400 transition-all duration-300 hover:border-orange-500/40 hover:bg-orange-500/10 hover:text-orange-400"
+                    >
+                      <InstagramIcon size={19} />
+                    </motion.a>
+                  </div>
+                </div>
               </div>
 
-              {/* Name + Email */}
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              {/* Bottom Accent */}
 
-                <div>
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
+            </div>
+          </motion.div>
+
+          {/* ================= RIGHT SIDE ================= */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{
+              once: false,
+              amount: 0.15,
+            }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="lg:col-span-3"
+          >
+            <form
+              onSubmit={handleSubmit}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9"
+            >
+              {/* Glow */}
+
+              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-700 group-hover:opacity-100" />
+
+              <div className="relative">
+                <div className="mb-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
+                    Send a Message
+                  </p>
+
+                  <h3 className="mt-3 text-2xl font-bold text-white">
+                    Tell me about your project
+                  </h3>
+                </div>
+
+                {/* Name + Email */}
+
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="mb-2 block text-sm font-medium text-gray-400"
+                    >
+                      Your Name
+                    </label>
+
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="John Doe"
+                      className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-medium text-gray-400"
+                    >
+                      Email Address
+                    </label>
+
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
+                    />
+                  </div>
+                </div>
+
+                {/* Subject */}
+
+                <div className="mt-5">
                   <label
-                    htmlFor="name"
+                    htmlFor="subject"
                     className="mb-2 block text-sm font-medium text-gray-400"
                   >
-                    Your Name
+                    Subject
                   </label>
 
                   <input
-                    id="name"
-                    name="name"
+                    id="subject"
+                    name="subject"
                     type="text"
                     required
-                    placeholder="John Doe"
+                    placeholder="Let's work together"
                     className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
                   />
                 </div>
 
-                <div>
+                {/* Message */}
+
+                <div className="mt-5">
                   <label
-                    htmlFor="email"
+                    htmlFor="message"
                     className="mb-2 block text-sm font-medium text-gray-400"
                   >
-                    Email Address
+                    Message
                   </label>
 
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
+                  <textarea
+                    id="message"
+                    name="message"
                     required
-                    placeholder="john@example.com"
-                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
+                    rows="6"
+                    placeholder="Tell me a little about your project..."
+                    className="w-full resize-none rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
                   />
                 </div>
 
-              </div>
+                {/* Success Message */}
 
-              {/* Subject */}
-              <div className="mt-5">
-
-                <label
-                  htmlFor="subject"
-                  className="mb-2 block text-sm font-medium text-gray-400"
-                >
-                  Subject
-                </label>
-
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  placeholder="Let's work together"
-                  className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
-                />
-
-              </div>
-
-              {/* Message */}
-              <div className="mt-5">
-
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-gray-400"
-                >
-                  Message
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="6"
-                  placeholder="Tell me a little about your project..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none placeholder:text-gray-600 transition-all duration-300 focus:border-orange-500/60 focus:ring-2 focus:ring-orange-500/10"
-                />
-
-              </div>
-
-              {/* Success Message */}
-              {success && (
-                <div className="mt-5 flex items-center gap-3 rounded-xl border border-green-500/20 bg-green-500/10 px-4 py-3 text-sm text-green-400">
-                  <CheckCircle2 size={18} />
-                  <span>{success}</span>
-                </div>
-              )}
-
-              {/* Error Message */}
-              {error && (
-                <div className="mt-5 flex items-center gap-3 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
-                  <AlertCircle size={18} />
-                  <span>{error}</span>
-                </div>
-              )}
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_25px_rgba(249,115,22,0.15)] transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-amber-600 hover:shadow-[0_0_35px_rgba(249,115,22,0.3)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
-              >
-                {loading ? (
-                  <>
-                    <LoaderCircle
-                      size={18}
-                      className="animate-spin"
-                    />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-
-                    <Send
-                      size={17}
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </>
+                {success && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-5 flex items-center gap-3 rounded-xl border border-green-500/20 bg-green-500/10 px-4 py-3 text-sm text-green-400"
+                  >
+                    <CheckCircle2 size={18} />
+                    <span>{success}</span>
+                  </motion.div>
                 )}
-              </button>
 
-              <p className="mt-4 text-center text-xs text-gray-600">
-                Your message will be securely submitted to the server.
-              </p>
+                {/* Error Message */}
 
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-5 flex items-center gap-3 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400"
+                  >
+                    <AlertCircle size={18} />
+                    <span>{error}</span>
+                  </motion.div>
+                )}
+
+                {/* Submit Button */}
+
+                <motion.button
+                  whileHover={{
+                    y: -3,
+                  }}
+                  whileTap={{
+                    scale: 0.98,
+                  }}
+                  type="submit"
+                  disabled={loading}
+                  className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_25px_rgba(249,115,22,0.15)] transition-all duration-300 hover:from-orange-600 hover:to-amber-600 hover:shadow-[0_0_35px_rgba(249,115,22,0.3)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                >
+                  {loading ? (
+                    <>
+                      <LoaderCircle
+                        size={18}
+                        className="animate-spin"
+                      />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+
+                      <Send
+                        size={17}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
+                    </>
+                  )}
+                </motion.button>
+
+                <p className="mt-4 text-center text-xs text-gray-600">
+                  Your message will be securely submitted to the server.
+                </p>
+              </div>
+
+              {/* Bottom Accent */}
+
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
             </form>
-
-          </div>
-
+          </motion.div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
+        {/* ================= BOTTOM ================= */}
 
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="mt-16 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left"
+        >
           <p className="text-sm text-gray-500">
             Let's connect and create something meaningful.
           </p>
@@ -446,9 +541,7 @@ function Contact() {
               className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             />
           </a>
-
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

@@ -1,10 +1,11 @@
 import {
   Code2,
-  Database,
   Server,
   ShoppingBag,
+  Dumbbell,
   ArrowUpRight,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Experience() {
   const experiences = [
@@ -23,6 +24,7 @@ function Experience() {
         "Redux Toolkit",
       ],
     },
+
     {
       year: "2026",
       title: "Sneak.in",
@@ -38,6 +40,24 @@ function Experience() {
         "Admin Dashboard",
       ],
     },
+
+    {
+      year: "2026",
+      title: "IronMind",
+      type: "MERN Stack Fitness Application",
+      icon: Dumbbell,
+      description:
+        "Built a full-stack fitness tracking application using the MERN stack for creating and managing workouts, tracking exercises, sets, reps, weight and rest time, along with workout history and progress tracking.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT Authentication",
+        "Workout Tracking",
+      ],
+    },
+
     {
       year: "2025 — 2026",
       title: "Frontend & Backend Learning",
@@ -51,10 +71,25 @@ function Experience() {
         "Axios",
         "Tailwind CSS",
         "Git & GitHub",
-        "figma"
+        "Figma",
       ],
     },
   ];
+
+  const cardVariants = {
+    hidden: (index) => ({
+      opacity: 0,
+      x: index % 2 === 0 ? -100 : 100,
+    }),
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.9,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
 
   return (
     <section
@@ -68,19 +103,36 @@ function Experience() {
       <div className="pointer-events-none absolute -right-40 bottom-20 h-[400px] w-[400px] rounded-full bg-amber-500/10 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
-
         {/* ================= HEADER ================= */}
 
-        <div className="mb-16 max-w-2xl">
-
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mb-16 max-w-2xl"
+        >
           <div className="mb-4 flex items-center gap-3">
-
-            <span className="h-[2px] w-10 bg-gradient-to-r from-orange-500 to-amber-500" />
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: 40 }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+              }}
+              transition={{ duration: 0.6 }}
+              className="h-[2px] bg-gradient-to-r from-orange-500 to-amber-500"
+            />
 
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
               My Journey
             </span>
-
           </div>
 
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -92,60 +144,79 @@ function Experience() {
 
           <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
             My journey has been focused on continuously learning, building
-            real-world projects and improving my full-stack development skills.
+            real-world projects and improving my full-stack development
+            skills.
           </p>
-
-        </div>
+        </motion.div>
 
         {/* ================= TIMELINE ================= */}
 
         <div className="relative">
-
           {/* Timeline Line */}
 
           <div className="absolute left-[20px] top-0 hidden h-full w-px bg-gradient-to-b from-orange-500/50 via-white/10 to-transparent sm:block" />
 
           <div className="space-y-8">
-
             {experiences.map((experience, index) => {
               const Icon = experience.icon;
 
               return (
-                <div
+                <motion.div
                   key={experience.title}
+                  custom={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{
+                    once: false,
+                    amount: 0.15,
+                  }}
                   className="group relative sm:pl-16"
                 >
-
                   {/* Timeline Dot */}
 
                   <div className="absolute left-0 top-8 hidden h-10 w-10 items-center justify-center rounded-full border border-orange-500/30 bg-[#0a0a0a] text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.15)] sm:flex">
-
-                    <div className="h-2.5 w-2.5 rounded-full bg-orange-500" />
-
+                    <motion.div
+                      whileInView={{
+                        scale: [0.7, 1.15, 1],
+                      }}
+                      viewport={{
+                        once: false,
+                        amount: 0.15,
+                      }}
+                      transition={{
+                        duration: 0.6,
+                      }}
+                      className="h-2.5 w-2.5 rounded-full bg-orange-500"
+                    />
                   </div>
 
                   {/* Experience Card */}
 
                   <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-orange-500/30 hover:bg-orange-500/[0.03] sm:p-9">
-
                     {/* Glow */}
 
                     <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                     <div className="relative">
-
                       {/* Top */}
 
                       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-
                         <div className="flex gap-4">
-
-                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-orange-500/20 bg-orange-500/10 text-orange-400">
+                          <motion.div
+                            whileHover={{
+                              rotate: 6,
+                              scale: 1.05,
+                            }}
+                            transition={{
+                              duration: 0.3,
+                            }}
+                            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-orange-500/20 bg-orange-500/10 text-orange-400"
+                          >
                             <Icon size={22} />
-                          </div>
+                          </motion.div>
 
                           <div>
-
                             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                               {experience.type}
                             </p>
@@ -153,15 +224,12 @@ function Experience() {
                             <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
                               {experience.title}
                             </h3>
-
                           </div>
-
                         </div>
 
                         <span className="w-fit rounded-full border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold text-gray-400">
                           {experience.year}
                         </span>
-
                       </div>
 
                       {/* Description */}
@@ -173,57 +241,78 @@ function Experience() {
                       {/* Skills */}
 
                       <div className="mt-6 flex flex-wrap gap-2">
-
-                        {experience.skills.map((skill) => (
-                          <span
+                        {experience.skills.map((skill, skillIndex) => (
+                          <motion.span
                             key={skill}
+                            initial={{
+                              opacity: 0,
+                              y: 10,
+                            }}
+                            whileInView={{
+                              opacity: 1,
+                              y: 0,
+                            }}
+                            viewport={{
+                              once: false,
+                              amount: 0.15,
+                            }}
+                            transition={{
+                              duration: 0.35,
+                              delay: skillIndex * 0.05,
+                            }}
                             className="rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-medium text-orange-400 transition-colors duration-300 hover:bg-orange-500/20"
                           >
                             {skill}
-                          </span>
+                          </motion.span>
                         ))}
-
                       </div>
-
                     </div>
 
                     {/* Bottom Accent */}
 
                     <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
                   </div>
-
-                </div>
+                </motion.div>
               );
             })}
-
           </div>
-
         </div>
 
         {/* ================= CURRENT STATUS ================= */}
 
-        <div className="mt-12 rounded-3xl border border-orange-500/20 bg-gradient-to-r from-orange-500/[0.08] to-transparent p-7 sm:p-8">
-
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mt-12 rounded-3xl border border-orange-500/20 bg-gradient-to-r from-orange-500/[0.08] to-transparent p-7 sm:p-8"
+        >
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-
             <div>
-
               <div className="flex items-center gap-2">
-
                 <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-orange-500" />
 
                 <p className="text-sm font-semibold text-orange-400">
                   Currently Learning & Building
                 </p>
-
               </div>
 
               <p className="mt-2 text-sm leading-6 text-gray-500">
                 Continuously improving my skills through practical projects
                 and real-world development.
               </p>
-
             </div>
 
             <a
@@ -237,11 +326,8 @@ function Experience() {
                 className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
               />
             </a>
-
           </div>
-
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
