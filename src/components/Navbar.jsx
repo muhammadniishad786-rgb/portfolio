@@ -7,10 +7,10 @@ function Navbar() {
 
   const navItems = [
     "Home",
-    "About",
     "Services",
     "Skills",
     "Projects",
+    "About",
     "Contact",
   ];
 
