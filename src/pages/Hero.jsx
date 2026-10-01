@@ -8,6 +8,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import resume from "../assets/Nishad_MERN_Developer.pdf"
 
 const GITHUB_URL = "https://github.com/muhammadniishad786-rgb";
 const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-nishad-849197439/";
@@ -303,7 +304,7 @@ function Hero() {
               </a>
 
               <a
-                href="/Nishad_MERN_Developerr.pdf"
+                href={resume}
                 target="_blank"
                 rel="noreferrer"
                 className="group flex min-h-11 items-center gap-2 rounded-full border border-zinc-700 px-5 py-3 text-xs font-bold text-white transition-all duration-300 hover:border-orange-500 hover:text-orange-500 sm:px-6 sm:text-sm"
