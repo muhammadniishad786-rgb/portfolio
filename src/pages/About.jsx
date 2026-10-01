@@ -106,7 +106,9 @@ function About() {
 
       <div className="pointer-events-none absolute -right-40 bottom-20 h-[450px] w-[450px] rounded-full bg-amber-500/10 blur-[150px]" />
 
-      {/* Subtle Grid */}
+      {/* =====================================================
+          SUBTLE GRID
+      ====================================================== */}
 
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.025]"
@@ -118,7 +120,6 @@ function About() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
         {/* =====================================================
             SECTION HEADER
         ====================================================== */}
@@ -143,7 +144,6 @@ function About() {
           className="mb-16"
         >
           <div className="mb-4 flex items-center gap-3">
-
             <motion.span
               initial={{
                 width: 0,
@@ -163,7 +163,6 @@ function About() {
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
               About Me
             </span>
-
           </div>
 
           <h2 className="max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -179,7 +178,6 @@ function About() {
         ====================================================== */}
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-
           {/* ===================================================
               LEFT CONTENT
           ==================================================== */}
@@ -195,7 +193,6 @@ function About() {
             className="lg:col-span-7"
           >
             <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-colors duration-500 hover:border-orange-500/30 hover:bg-orange-500/[0.025] sm:p-9">
-
               {/* Hover Glow */}
 
               <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-700 group-hover:opacity-100" />
@@ -205,7 +202,6 @@ function About() {
               ================================================== */}
 
               <div className="relative mb-6 flex items-center gap-3">
-
                 <motion.div
                   whileHover={{
                     scale: 1.08,
@@ -228,7 +224,6 @@ function About() {
                     Building modern web applications
                   </p>
                 </div>
-
               </div>
 
               {/* =================================================
@@ -236,14 +231,14 @@ function About() {
               ================================================== */}
 
               <div className="relative space-y-5 text-sm leading-7 text-gray-400 sm:text-base">
-
                 <p>
                   I'm{" "}
                   <span className="font-semibold text-white">
                     Muhammad Nishad
                   </span>
-                  , a MERN Stack Developer passionate about building modern,
-                  responsive and scalable web applications.
+                  , a MERN Stack Developer and BSc Computer Science graduate
+                  passionate about building modern, responsive and scalable web
+                  applications.
                 </p>
 
                 <p>
@@ -256,12 +251,20 @@ function About() {
                 </p>
 
                 <p>
+                  I also gained practical industry experience through a{" "}
+                  <span className="text-orange-400">
+                    2-month Full-Stack Developer internship at CodeMe
+                  </span>
+                  , where I further developed my understanding of real-world
+                  web development and collaborative software development.
+                </p>
+
+                <p>
                   My approach is focused on writing clean, maintainable code
                   while creating interfaces that are simple, responsive and
                   easy to use. I enjoy taking an idea from concept to a
                   working application.
                 </p>
-
               </div>
 
               {/* =================================================
@@ -269,7 +272,6 @@ function About() {
               ================================================== */}
 
               <div className="relative mt-8 border-t border-white/10 pt-7">
-
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                   What I Work With
                 </p>
@@ -301,13 +303,11 @@ function About() {
                     </motion.div>
                   ))}
                 </motion.div>
-
               </div>
 
               {/* Bottom Accent */}
 
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
             </div>
           </motion.div>
 
@@ -325,7 +325,6 @@ function About() {
             }}
             className="space-y-5 lg:col-span-5"
           >
-
             {/* =================================================
                 EDUCATION
             ================================================== */}
@@ -334,9 +333,7 @@ function About() {
               variants={rightCardVariants}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.03]"
             >
-
               <div className="flex items-start gap-4">
-
                 <motion.div
                   whileHover={{
                     scale: 1.08,
@@ -351,7 +348,6 @@ function About() {
                 </motion.div>
 
                 <div>
-
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                     Education
                   </p>
@@ -364,25 +360,24 @@ function About() {
                     University of Calicut
                   </p>
 
+                  <p className="mt-1 text-xs text-gray-600">
+                    Prajyoti Niketan College, Pudukad · 2026
+                  </p>
                 </div>
-
               </div>
 
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
             </motion.div>
 
             {/* =================================================
-                FOCUS
+                PROFESSIONAL EXPERIENCE
             ================================================== */}
 
             <motion.div
               variants={rightCardVariants}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.03]"
             >
-
               <div className="flex items-start gap-4">
-
                 <motion.div
                   whileHover={{
                     scale: 1.08,
@@ -397,7 +392,46 @@ function About() {
                 </motion.div>
 
                 <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
+                    Experience
+                  </p>
 
+                  <h3 className="mt-2 text-lg font-bold text-white">
+                    Full-Stack Developer Intern
+                  </h3>
+
+                  <p className="mt-1 text-sm leading-6 text-gray-500">
+                    CodeMe · Aug 2026 — Sep 2026
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
+            </motion.div>
+
+            {/* =================================================
+                FOCUS
+            ================================================== */}
+
+            <motion.div
+              variants={rightCardVariants}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.03]"
+            >
+              <div className="flex items-start gap-4">
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-orange-500/20 bg-orange-500/10 text-orange-400"
+                >
+                  <Code2 size={21} />
+                </motion.div>
+
+                <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                     Focus
                   </p>
@@ -409,13 +443,10 @@ function About() {
                   <p className="mt-1 text-sm leading-6 text-gray-500">
                     React • Node.js • Express.js • MongoDB
                   </p>
-
                 </div>
-
               </div>
 
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
             </motion.div>
 
             {/* =================================================
@@ -426,9 +457,7 @@ function About() {
               variants={rightCardVariants}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-all duration-300 hover:border-orange-500/30 hover:bg-orange-500/[0.03]"
             >
-
               <div className="flex items-start gap-4">
-
                 <motion.div
                   whileHover={{
                     scale: 1.08,
@@ -443,7 +472,6 @@ function About() {
                 </motion.div>
 
                 <div>
-
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                     Based In
                   </p>
@@ -455,17 +483,12 @@ function About() {
                   <p className="mt-1 text-sm leading-6 text-gray-500">
                     Open to opportunities and collaborations
                   </p>
-
                 </div>
-
               </div>
 
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
             </motion.div>
-
           </motion.div>
-
         </div>
 
         {/* =====================================================
@@ -492,9 +515,7 @@ function About() {
           }}
           className="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl border border-orange-500/20 bg-gradient-to-r from-orange-500/[0.08] to-transparent p-7 sm:flex-row sm:items-center sm:p-8"
         >
-
           <div>
-
             <p className="text-lg font-bold text-white sm:text-xl">
               Interested in working together?
             </p>
@@ -502,7 +523,6 @@ function About() {
             <p className="mt-2 text-sm leading-6 text-gray-500">
               Let's build something useful, modern and impactful.
             </p>
-
           </div>
 
           <a
@@ -516,9 +536,7 @@ function About() {
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
           </a>
-
         </motion.div>
-
       </div>
     </section>
   );
