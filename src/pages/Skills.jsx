@@ -12,21 +12,24 @@ function Skills() {
     {
       icon: Code2,
       title: "Frontend",
-      description: "Building responsive and interactive user interfaces.",
+      description:
+        "Building responsive, interactive and component-based user interfaces.",
       skills: [
         "HTML",
         "CSS",
-        "JavaScript",
+        "JavaScript ES6+",
         "React.js",
         "Tailwind CSS",
         "React Router",
         "Redux Toolkit",
       ],
     },
+
     {
       icon: Server,
       title: "Backend",
-      description: "Developing secure and scalable server-side applications.",
+      description:
+        "Developing REST APIs, authentication systems and server-side applications.",
       skills: [
         "Node.js",
         "Express.js",
@@ -34,12 +37,15 @@ function Skills() {
         "JWT Authentication",
         "Middleware",
         "MVC Architecture",
+        "Axios",
       ],
     },
+
     {
       icon: Database,
       title: "Database",
-      description: "Working with structured and scalable data solutions.",
+      description:
+        "Designing and managing application data using MongoDB and Mongoose.",
       skills: [
         "MongoDB",
         "Mongoose",
@@ -49,17 +55,18 @@ function Skills() {
         "Aggregation",
       ],
     },
+
     {
       icon: Wrench,
       title: "Tools & Workflow",
-      description: "Using modern tools to build and manage projects.",
+      description:
+        "Using modern development tools for building, testing and deploying applications.",
       skills: [
-        "GitHub",
         "Git",
+        "GitHub",
         "Postman",
-        "Figma",
         "VS Code",
-        "Axios",
+        "Figma",
         "Render",
         "Vite",
       ],
@@ -70,6 +77,7 @@ function Skills() {
 
   const containerVariants = {
     hidden: {},
+
     visible: {
       transition: {
         staggerChildren: 0.18,
@@ -88,6 +96,7 @@ function Skills() {
       opacity: 1,
       x: 0,
       y: 0,
+
       transition: {
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1],
@@ -106,6 +115,7 @@ function Skills() {
       opacity: 1,
       scale: 1,
       y: 0,
+
       transition: {
         duration: 0.4,
         ease: "easeOut",
@@ -136,7 +146,6 @@ function Skills() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
         {/* ================= HEADER ================= */}
 
         <motion.div
@@ -159,7 +168,6 @@ function Skills() {
           className="mx-auto mb-16 max-w-2xl text-center"
         >
           <div className="mb-4 flex items-center justify-center gap-3">
-
             <motion.span
               initial={{
                 width: 0,
@@ -172,7 +180,6 @@ function Skills() {
               }}
               transition={{
                 duration: 0.7,
-                delay: 0.2,
               }}
               className="h-[2px] bg-gradient-to-r from-orange-500 to-amber-500"
             />
@@ -193,11 +200,9 @@ function Skills() {
               }}
               transition={{
                 duration: 0.7,
-                delay: 0.2,
               }}
               className="h-[2px] bg-gradient-to-r from-amber-500 to-orange-500"
             />
-
           </div>
 
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -208,8 +213,8 @@ function Skills() {
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
-            A collection of technologies and tools I use to build modern,
-            responsive and full-stack web applications.
+            Technologies and tools I use to build modern, responsive and
+            full-stack web applications.
           </p>
         </motion.div>
 
@@ -238,7 +243,6 @@ function Skills() {
                 }}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-7 backdrop-blur-sm transition-colors duration-500 hover:border-orange-500/40 hover:bg-orange-500/[0.03] sm:p-8"
               >
-
                 {/* ================= HOVER GLOW ================= */}
 
                 <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-700 group-hover:opacity-100" />
@@ -252,7 +256,6 @@ function Skills() {
                 {/* ================= HEADER ================= */}
 
                 <div className="relative flex items-center gap-4">
-
                   <motion.div
                     whileHover={{
                       scale: 1.08,
@@ -263,10 +266,7 @@ function Skills() {
                     }}
                     className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 text-orange-400 transition-all duration-300 group-hover:border-orange-500/60 group-hover:bg-orange-500 group-hover:text-white group-hover:shadow-[0_0_30px_rgba(249,115,22,0.35)]"
                   >
-                    <Icon
-                      size={25}
-                      strokeWidth={1.8}
-                    />
+                    <Icon size={25} strokeWidth={1.8} />
                   </motion.div>
 
                   <div>
@@ -278,7 +278,6 @@ function Skills() {
                       {category.description}
                     </p>
                   </div>
-
                 </div>
 
                 {/* ================= SKILLS ================= */}
@@ -310,7 +309,6 @@ function Skills() {
                 {/* ================= BOTTOM ACCENT ================= */}
 
                 <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
               </motion.div>
             );
           })}
@@ -338,19 +336,17 @@ function Skills() {
           className="mt-16 border-t border-white/10 pt-8"
         >
           <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
-
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-400">
                 Current Stack
               </p>
 
               <p className="mt-2 text-sm text-gray-500">
-                React • Node.js • Express • MongoDB
+                React • Node.js • Express • MongoDB • Redux Toolkit
               </p>
             </div>
 
             <div className="flex items-center gap-2 text-sm text-gray-500">
-
               <motion.span
                 animate={{
                   opacity: [0.4, 1, 0.4],
@@ -366,10 +362,8 @@ function Skills() {
 
               Open to learning new technologies
             </div>
-
           </div>
         </motion.div>
-
       </div>
     </section>
   );
