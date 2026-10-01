@@ -9,29 +9,32 @@ import { motion } from "framer-motion";
 
 function Experience() {
   const experiences = [
+    // ================= INTERNSHIP =================
     {
-      year: "2026",
-      title: "MERN Stack Development",
-      type: "Full-Stack Development",
+      year: "Aug 2026 — Sep 2026",
+      title: "Full-Stack Developer Intern",
+      type: "Professional Experience · CodeMe",
       icon: Code2,
       description:
-        "Focused on building full-stack web applications using React, Node.js, Express.js and MongoDB. Worked across frontend architecture, backend APIs, authentication and database integration.",
+        "Completed a 2-month full-stack development internship at CodeMe, gaining practical experience in modern web development, frontend development, backend APIs, database integration, and collaborative software development.",
       skills: [
-        "React",
+        "React.js",
         "Node.js",
         "Express.js",
         "MongoDB",
-        "Redux Toolkit",
+        "REST APIs",
+        "Git & GitHub",
       ],
     },
 
+    // ================= SNEAK.IN =================
     {
       year: "2026",
       title: "Sneak.in",
       type: "Full-Stack E-Commerce Project",
       icon: ShoppingBag,
       description:
-        "Designed and developed a complete footwear e-commerce application with customer and admin functionality. Implemented authentication, product management, cart, addresses and order management.",
+        "Designed and developed a complete footwear e-commerce application with customer and admin functionality. Implemented authentication, product management, shopping cart, addresses, checkout, and order management.",
       skills: [
         "JWT Authentication",
         "Product CRUD",
@@ -41,13 +44,14 @@ function Experience() {
       ],
     },
 
+    // ================= IRONMIND =================
     {
       year: "2026",
       title: "IronMind",
       type: "MERN Stack Fitness Application",
       icon: Dumbbell,
       description:
-        "Built a full-stack fitness tracking application using the MERN stack for creating and managing workouts, tracking exercises, sets, reps, weight and rest time, along with workout history and progress tracking.",
+        "Built a full-stack fitness tracking application using the MERN stack for creating and managing workouts, tracking exercises, sets, reps, weight, rest time, workout history, and fitness progress.",
       skills: [
         "React",
         "Node.js",
@@ -58,13 +62,32 @@ function Experience() {
       ],
     },
 
+    // ================= MERN TRAINING =================
+    {
+      year: "2026",
+      title: "MERN Stack Development",
+      type: "Professional Training · CodeMe",
+      icon: Server,
+      description:
+        "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React, Node.js, Express.js, and MongoDB, with practical experience in REST APIs, authentication, database integration, and deployment.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redux Toolkit",
+        "REST APIs",
+      ],
+    },
+
+    // ================= DEVELOPMENT JOURNEY =================
     {
       year: "2025 — 2026",
       title: "Frontend & Backend Learning",
       type: "Development Journey",
       icon: Server,
       description:
-        "Built a strong foundation in web development by working with modern frontend and backend technologies, REST APIs, database operations and responsive UI development.",
+        "Built a strong foundation in web development by working with modern frontend and backend technologies, REST APIs, database operations, responsive UI development, and version control.",
       skills: [
         "JavaScript",
         "REST APIs",
@@ -81,6 +104,7 @@ function Experience() {
       opacity: 0,
       x: index % 2 === 0 ? -100 : 100,
     }),
+
     visible: {
       opacity: 1,
       x: 0,
@@ -143,9 +167,9 @@ function Experience() {
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
-            My journey has been focused on continuously learning, building
-            real-world projects and improving my full-stack development
-            skills.
+            My journey has been focused on learning, gaining practical
+            experience, building real-world applications, and continuously
+            improving my full-stack development skills.
           </p>
         </motion.div>
 
@@ -162,7 +186,7 @@ function Experience() {
 
               return (
                 <motion.div
-                  key={experience.title}
+                  key={`${experience.title}-${index}`}
                   custom={index}
                   variants={cardVariants}
                   initial="hidden"
@@ -173,7 +197,7 @@ function Experience() {
                   }}
                   className="group relative sm:pl-16"
                 >
-                  {/* Timeline Dot */}
+                  {/* ================= TIMELINE DOT ================= */}
 
                   <div className="absolute left-0 top-8 hidden h-10 w-10 items-center justify-center rounded-full border border-orange-500/30 bg-[#0a0a0a] text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.15)] sm:flex">
                     <motion.div
@@ -191,7 +215,7 @@ function Experience() {
                     />
                   </div>
 
-                  {/* Experience Card */}
+                  {/* ================= EXPERIENCE CARD ================= */}
 
                   <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-orange-500/30 hover:bg-orange-500/[0.03] sm:p-9">
                     {/* Glow */}
@@ -199,10 +223,12 @@ function Experience() {
                     <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                     <div className="relative">
-                      {/* Top */}
+                      {/* ================= TOP ================= */}
 
                       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                         <div className="flex gap-4">
+                          {/* Icon */}
+
                           <motion.div
                             whileHover={{
                               rotate: 6,
@@ -217,9 +243,13 @@ function Experience() {
                           </motion.div>
 
                           <div>
+                            {/* Type */}
+
                             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                               {experience.type}
                             </p>
+
+                            {/* Title */}
 
                             <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
                               {experience.title}
@@ -227,18 +257,20 @@ function Experience() {
                           </div>
                         </div>
 
+                        {/* Year */}
+
                         <span className="w-fit rounded-full border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold text-gray-400">
                           {experience.year}
                         </span>
                       </div>
 
-                      {/* Description */}
+                      {/* ================= DESCRIPTION ================= */}
 
                       <p className="mt-6 max-w-3xl text-sm leading-7 text-gray-400 sm:text-base">
                         {experience.description}
                       </p>
 
-                      {/* Skills */}
+                      {/* ================= SKILLS ================= */}
 
                       <div className="mt-6 flex flex-wrap gap-2">
                         {experience.skills.map((skill, skillIndex) => (
@@ -268,7 +300,7 @@ function Experience() {
                       </div>
                     </div>
 
-                    {/* Bottom Accent */}
+                    {/* ================= BOTTOM ACCENT ================= */}
 
                     <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
                   </div>
