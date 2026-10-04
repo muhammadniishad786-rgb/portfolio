@@ -2,6 +2,7 @@ import {
   Code2,
   Server,
   Database,
+  BrainCircuit,
   Rocket,
   ArrowUpRight,
 } from "lucide-react";
@@ -35,6 +36,14 @@ function Services() {
     },
     {
       number: "04",
+      icon: BrainCircuit,
+      title: "AI Integration",
+      description:
+        "Integrating AI-powered features into modern web applications using AI APIs to create intelligent assistants, personalized experiences and workflow automation.",
+      tags: ["AI APIs", "OpenAI", "Automation"],
+    },
+    {
+      number: "05",
       icon: Rocket,
       title: "Deployment & Integration",
       description:
@@ -110,7 +119,6 @@ function Services() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
         {/* =====================================================
             HEADER
         ====================================================== */}
@@ -171,8 +179,9 @@ function Services() {
           {/* Description */}
 
           <p className="mt-5 max-w-xl text-sm leading-7 text-gray-400 sm:text-base">
-            I create modern and scalable web solutions focused on clean
-            development, responsive design and real-world functionality.
+            I build modern full-stack web applications with the MERN stack
+            and integrate AI-powered features to create smarter digital
+            experiences.
           </p>
         </motion.div>
 
@@ -181,7 +190,6 @@ function Services() {
         ====================================================== */}
 
         <div className="hidden overflow-hidden lg:block">
-
           <motion.div
             variants={cardsAnimation}
             initial="hidden"
@@ -190,7 +198,7 @@ function Services() {
               once: false,
               amount: 0.15,
             }}
-            className="grid grid-cols-4 gap-5"
+            className="grid grid-cols-3 gap-5"
           >
             {services.map((service) => {
               const Icon = service.icon;
@@ -220,11 +228,9 @@ function Services() {
                   {/* Top content */}
 
                   <div className="relative">
-
                     {/* Icon + number */}
 
                     <div className="flex items-start justify-between">
-
                       <motion.div
                         whileHover={{
                           scale: 1.08,
@@ -235,16 +241,12 @@ function Services() {
                         }}
                         className="flex h-14 w-14 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 text-orange-400 transition-all duration-300 group-hover:border-orange-500/60 group-hover:bg-orange-500 group-hover:text-white group-hover:shadow-[0_0_30px_rgba(249,115,22,0.35)]"
                       >
-                        <Icon
-                          size={25}
-                          strokeWidth={1.8}
-                        />
+                        <Icon size={25} strokeWidth={1.8} />
                       </motion.div>
 
                       <span className="font-mono text-sm text-orange-500/50">
                         {service.number}
                       </span>
-
                     </div>
 
                     {/* Title */}
@@ -258,13 +260,11 @@ function Services() {
                     <p className="mt-4 text-sm leading-7 text-gray-400">
                       {service.description}
                     </p>
-
                   </div>
 
                   {/* Bottom content */}
 
                   <div className="relative mt-8">
-
                     {/* Tags */}
 
                     <div className="mb-6 flex flex-wrap gap-2">
@@ -281,7 +281,6 @@ function Services() {
                     {/* Learn more */}
 
                     <div className="flex items-center justify-between border-t border-white/10 pt-5">
-
                       <span className="text-sm font-semibold text-orange-400">
                         Learn More
                       </span>
@@ -295,9 +294,7 @@ function Services() {
                       >
                         <ArrowUpRight size={17} />
                       </motion.div>
-
                     </div>
-
                   </div>
 
                   {/* Bottom line */}
@@ -314,7 +311,6 @@ function Services() {
                     }}
                     className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-orange-500 to-amber-500"
                   />
-
                 </motion.div>
               );
             })}
@@ -326,7 +322,6 @@ function Services() {
         ====================================================== */}
 
         <div className="lg:hidden">
-
           <motion.div
             initial={{
               opacity: 0,
@@ -370,12 +365,8 @@ function Services() {
                   {/* Content */}
 
                   <div className="relative">
-
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 text-orange-400">
-                      <Icon
-                        size={25}
-                        strokeWidth={1.8}
-                      />
+                      <Icon size={25} strokeWidth={1.8} />
                     </div>
 
                     <h3 className="mt-8 text-2xl font-bold leading-tight">
@@ -385,13 +376,11 @@ function Services() {
                     <p className="mt-4 text-sm leading-7 text-gray-400">
                       {service.description}
                     </p>
-
                   </div>
 
                   {/* Bottom */}
 
                   <div className="relative">
-
                     <div className="mb-5 flex flex-wrap gap-2">
                       {service.tags.map((tag) => (
                         <span
@@ -404,7 +393,6 @@ function Services() {
                     </div>
 
                     <div className="flex items-center justify-between border-t border-white/10 pt-5">
-
                       <span className="text-sm font-semibold text-orange-400">
                         Learn More
                       </span>
@@ -412,9 +400,7 @@ function Services() {
                       <div className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-500/30 text-orange-400">
                         <ArrowUpRight size={17} />
                       </div>
-
                     </div>
-
                   </div>
                 </motion.div>
               );
@@ -424,7 +410,6 @@ function Services() {
           {/* Swipe hint */}
 
           <div className="mt-2 flex items-center justify-between">
-
             <span className="text-xs uppercase tracking-[0.2em] text-zinc-600">
               Swipe to explore
             </span>
@@ -440,7 +425,6 @@ function Services() {
                 className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               />
             </a>
-
           </div>
         </div>
 
@@ -484,7 +468,6 @@ function Services() {
             />
           </a>
         </motion.div>
-
       </div>
     </section>
   );

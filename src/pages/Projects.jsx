@@ -1,6 +1,7 @@
 import {
   ExternalLink,
   ArrowUpRight,
+  Dumbbell,
   ShoppingBag,
   Code2,
 } from "lucide-react";
@@ -25,45 +26,11 @@ function Projects() {
     {
       featured: true,
       number: "01",
-      title: "Sneak.in",
-      category: "Full-Stack E-Commerce",
-
-      description:
-        "A full-stack footwear e-commerce platform built with the MERN stack. The application provides customers with a modern shopping experience while giving administrators tools to manage products, users and orders.",
-
-      image: "/SneakInLogo.png",
-
-      technologies: [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Redux Toolkit",
-        "Tailwind CSS",
-      ],
-
-      features: [
-        "JWT Authentication",
-        "Product Management",
-        "Shopping Cart",
-        "Address Management",
-        "Order Management",
-        "Admin Dashboard",
-      ],
-
-      liveLink: "https://sneak-in-wlqt.onrender.com",
-      githubLink:
-        "https://github.com/muhammadniishad786-rgb/Sneak.in",
-    },
-
-    {
-      featured: false,
-      number: "02",
       title: "IronMind",
-      category: "MERN Stack Application",
+      category: "AI-Powered Fitness Platform",
 
       description:
-        "Fitness tracking platform built with the MERN stack to create and manage workouts, track exercises, sets, reps, weight, workout history, and personalized fitness progress.",
+        "An AI-powered fitness and workout tracking platform built with the MERN stack. IronMind allows users to create and manage workouts, track exercises, record sets, reps and weight, monitor fitness progress, and receive personalized AI-powered fitness guidance.",
 
       image: "/IronMindLogo.png",
 
@@ -75,30 +42,72 @@ function Projects() {
         "Mongoose",
         "Redux Toolkit",
         "Tailwind CSS",
-        "OpenAI API - Soon",
+        "JWT",
+        "Gemini-Api"
+      ],
+
+      features: [
+        "JWT Authentication",
+        "Protected Routes",
+        "Workout Management",
+        "Exercise Tracking",
+        "Sets & Reps Tracking",
+        "Workout Completion",
+        "Progress Statistics",
+        "Personal Records",
+        "AI Fitness Assistant",
+        "Personalized AI Guidance",
+        "REST API Integration",
+        "Responsive Dashboard",
+      ],
+
+      liveLink: "https://ironmind-1-ged6.onrender.com",
+
+      githubLink: "https://github.com/muhammadniishad786-rgb/ironMind",
+    },
+
+    {
+      featured: false,
+      number: "02",
+      title: "Sneak.in",
+      category: "Full-Stack E-Commerce",
+
+      description:
+        "A full-stack footwear e-commerce platform built with the MERN stack. Sneak.in provides customers with a modern shopping experience while giving administrators tools to manage products, users, inventory, addresses, and orders.",
+
+      image: "/SneakInLogo.png",
+
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Redux Toolkit",
+        "Tailwind CSS",
         "JWT",
       ],
 
       features: [
-        "JWT-based authentication",
-        "Workout creation and management",
-        "Exercise and workout tracking",
-        "Sets, reps, weight, and rest-time tracking",
-        "Workout history and progress tracking",
-        "AI-powered fitness assistance - Soon",
-        "REST API integration",
-        "Responsive dashboard UI",
+        "JWT Authentication",
+        "Product Management",
+        "Shopping Cart",
+        "Address Management",
+        "Order Management",
+        "Stock Management",
+        "Admin Dashboard",
+        "REST API Integration",
+        "Responsive UI",
       ],
 
-      liveLink: "https://ironmind-1-ged6.onrender.com",
-      githubLink:
-        "https://github.com/muhammadniishad786-rgb/ironMind",
+      liveLink: "https://sneak-in-wlqt.onrender.com",
+      githubLink: "https://github.com/muhammadniishad786-rgb/Sneak.in",
     },
   ];
 
   /* =========================================================
      PROJECT CARD ANIMATION
-  ========================================================= */
+  ========================================================== */
 
   const projectVariants = {
     hidden: (index) => ({
@@ -144,7 +153,6 @@ function Projects() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
         {/* =====================================================
             HEADER
         ====================================================== */}
@@ -169,7 +177,6 @@ function Projects() {
           className="mb-16 flex flex-col justify-between gap-6 lg:flex-row lg:items-end"
         >
           <div className="max-w-2xl">
-
             {/* Small Label */}
 
             <div className="mb-4 flex items-center gap-3">
@@ -206,19 +213,15 @@ function Projects() {
             {/* Description */}
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-gray-400 sm:text-base">
-              Here are some of the projects I've built while developing my
-              skills in full-stack web development.
+              A selection of full-stack applications I've designed and developed
+              using modern MERN stack technologies.
             </p>
           </div>
 
           {/* Stack Label */}
 
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <Code2
-              size={17}
-              className="text-orange-500"
-            />
-
+            <Code2 size={17} className="text-orange-500" />
             MERN Stack Projects
           </div>
         </motion.div>
@@ -228,7 +231,6 @@ function Projects() {
         ====================================================== */}
 
         <div className="space-y-8">
-
           {projects.map((project, index) => (
             <motion.div
               key={project.number}
@@ -246,13 +248,11 @@ function Projects() {
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-colors duration-500 hover:border-orange-500/40"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
-
                 {/* =================================================
                     PROJECT IMAGE
                 ================================================== */}
 
                 <div className="relative min-h-[280px] overflow-hidden bg-neutral-950 sm:min-h-[360px]">
-
                   <img
                     src={project.image}
                     alt={`${project.title} project`}
@@ -278,7 +278,6 @@ function Projects() {
                   <div className="absolute bottom-6 left-6 rounded-full border border-white/10 bg-black/60 px-4 py-2 text-xs font-medium text-gray-300 backdrop-blur-md">
                     {project.category}
                   </div>
-
                 </div>
 
                 {/* =================================================
@@ -286,34 +285,35 @@ function Projects() {
                 ================================================== */}
 
                 <div className="relative flex flex-col justify-center p-7 sm:p-9 lg:p-12">
-
                   {/* Content Glow */}
 
                   <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                   <div className="relative">
-
                     {/* Title */}
 
                     <div className="flex items-start justify-between gap-5">
-
                       <div>
-
                         <div className="mb-3 flex items-center gap-2 text-sm font-medium text-orange-400">
-                          <ShoppingBag size={16} />
-                          Featured Project
+                          {project.title === "IronMind" ? (
+                            <Dumbbell size={16} />
+                          ) : (
+                            <ShoppingBag size={16} />
+                          )}
+
+                          {project.featured
+                            ? "Featured Project"
+                            : "Full-Stack Project"}
                         </div>
 
                         <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
                           {project.title}
                         </h3>
-
                       </div>
 
                       <span className="hidden text-5xl font-extrabold text-white/[0.04] sm:block">
                         {project.number}
                       </span>
-
                     </div>
 
                     {/* Description */}
@@ -327,13 +327,11 @@ function Projects() {
                     ================================================== */}
 
                     <div className="mt-7">
-
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                         Key Features
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-
                         {project.features.map((feature) => (
                           <span
                             key={feature}
@@ -342,9 +340,7 @@ function Projects() {
                             {feature}
                           </span>
                         ))}
-
                       </div>
-
                     </div>
 
                     {/* =================================================
@@ -352,13 +348,11 @@ function Projects() {
                     ================================================== */}
 
                     <div className="mt-7">
-
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                         Built With
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-
                         {project.technologies.map((technology) => (
                           <span
                             key={technology}
@@ -367,9 +361,7 @@ function Projects() {
                             {technology}
                           </span>
                         ))}
-
                       </div>
-
                     </div>
 
                     {/* =================================================
@@ -377,7 +369,6 @@ function Projects() {
                     ================================================== */}
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
-
                       {/* Live Demo */}
 
                       <a
@@ -387,7 +378,6 @@ function Projects() {
                         className="group/link inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(249,115,22,0.2)] transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-amber-600 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]"
                       >
                         Live Demo
-
                         <ExternalLink
                           size={16}
                           className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
@@ -403,24 +393,18 @@ function Projects() {
                         className="inline-flex items-center gap-2 rounded-full border border-orange-500/50 px-5 py-3 text-sm font-semibold text-orange-400 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500/10 hover:text-orange-300"
                       >
                         GitHub
-
                         <GitHubIcon size={17} />
                       </a>
-
                     </div>
-
                   </div>
 
                   {/* Bottom Accent */}
 
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-500 group-hover:w-full" />
-
                 </div>
-
               </div>
             </motion.div>
           ))}
-
         </div>
 
         {/* =====================================================
@@ -446,15 +430,14 @@ function Projects() {
           className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left"
         >
           <div>
-
             <p className="text-sm font-semibold text-gray-300">
               More projects coming soon.
             </p>
 
             <p className="mt-1 text-sm text-gray-500">
-              I'm continuously building and improving my development skills.
+              I'm continuously building and improving my full-stack development
+              skills.
             </p>
-
           </div>
 
           <a
@@ -462,15 +445,12 @@ function Projects() {
             className="group inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-colors hover:text-orange-300"
           >
             Get in touch
-
             <ArrowUpRight
               size={17}
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
           </a>
-
         </motion.div>
-
       </div>
     </section>
   );

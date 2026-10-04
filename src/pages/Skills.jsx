@@ -2,6 +2,7 @@ import {
   Code2,
   Server,
   Database,
+  BrainCircuit,
   Wrench,
   CheckCircle2,
 } from "lucide-react";
@@ -13,7 +14,7 @@ function Skills() {
       icon: Code2,
       title: "Frontend",
       description:
-        "Building responsive, interactive and component-based user interfaces.",
+        "Building responsive, interactive and component-based user interfaces with modern React development practices.",
       skills: [
         "HTML",
         "CSS",
@@ -22,6 +23,7 @@ function Skills() {
         "Tailwind CSS",
         "React Router",
         "Redux Toolkit",
+        "Vite",
       ],
     },
 
@@ -29,7 +31,7 @@ function Skills() {
       icon: Server,
       title: "Backend",
       description:
-        "Developing REST APIs, authentication systems and server-side applications.",
+        "Developing secure REST APIs, authentication systems and scalable server-side applications.",
       skills: [
         "Node.js",
         "Express.js",
@@ -45,7 +47,7 @@ function Skills() {
       icon: Database,
       title: "Database",
       description:
-        "Designing and managing application data using MongoDB and Mongoose.",
+        "Designing and managing application data using MongoDB, Mongoose and structured data models.",
       skills: [
         "MongoDB",
         "Mongoose",
@@ -57,10 +59,25 @@ function Skills() {
     },
 
     {
+      icon: BrainCircuit,
+      title: "AI Integration",
+      description:
+        "Integrating AI-powered features into web applications using AI APIs for intelligent and personalized experiences.",
+      skills: [
+        "AI APIs",
+        "OpenAI API",
+        "AI Assistants",
+        "Prompt Integration",
+        "API Integration",
+        "AI Automation",
+      ],
+    },
+
+    {
       icon: Wrench,
       title: "Tools & Workflow",
       description:
-        "Using modern development tools for building, testing and deploying applications.",
+        "Using modern development tools and workflows to build, test, manage and deploy full-stack applications.",
       skills: [
         "Git",
         "GitHub",
@@ -68,7 +85,7 @@ function Skills() {
         "VS Code",
         "Figma",
         "Render",
-        "Vite",
+        "npm",
       ],
     },
   ];
@@ -167,6 +184,8 @@ function Skills() {
           }}
           className="mx-auto mb-16 max-w-2xl text-center"
         >
+          {/* Small label */}
+
           <div className="mb-4 flex items-center justify-center gap-3">
             <motion.span
               initial={{
@@ -205,6 +224,8 @@ function Skills() {
             />
           </div>
 
+          {/* Heading */}
+
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
             Technologies I{" "}
             <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500 bg-clip-text text-transparent">
@@ -212,9 +233,11 @@ function Skills() {
             </span>
           </h2>
 
+          {/* Description */}
+
           <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
-            Technologies and tools I use to build modern, responsive and
-            full-stack web applications.
+            Technologies and tools I use to build modern full-stack web
+            applications and integrate AI-powered features.
           </p>
         </motion.div>
 
@@ -338,11 +361,12 @@ function Skills() {
           <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-400">
-                Current Stack
+                Core Stack
               </p>
 
               <p className="mt-2 text-sm text-gray-500">
-                React • Node.js • Express • MongoDB • Redux Toolkit
+                React • Node.js • Express • MongoDB • Redux Toolkit • AI
+                Integration
               </p>
             </div>
 

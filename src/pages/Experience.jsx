@@ -4,6 +4,7 @@ import {
   ShoppingBag,
   Dumbbell,
   ArrowUpRight,
+  BrainCircuit,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -16,7 +17,7 @@ function Experience() {
       type: "Professional Experience · CodeMe",
       icon: Code2,
       description:
-        "Completed a 2-month full-stack development internship at CodeMe, gaining practical experience in modern web development, frontend development, backend APIs, database integration, and collaborative software development.",
+        "Completed a 2-month full-stack development internship at CodeMe, gaining practical experience in modern web development, React.js, backend APIs, database integration, Git, and collaborative software development.",
       skills: [
         "React.js",
         "Node.js",
@@ -27,6 +28,26 @@ function Experience() {
       ],
     },
 
+    // ================= IRONMIND =================
+    {
+      year: "2026",
+      title: "IronMind",
+      type: "Featured MERN + AI Integration Project",
+      icon: Dumbbell,
+      description:
+        "Built a full-stack fitness and workout tracking platform using the MERN stack, featuring workout management, exercise tracking, sets, reps, weight, rest time, workout history, progress analytics, and AI-powered fitness guidance.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redux Toolkit",
+        "JWT Authentication",
+        "Workout Tracking",
+        "AI Integration",
+      ],
+    },
+
     // ================= SNEAK.IN =================
     {
       year: "2026",
@@ -34,31 +55,14 @@ function Experience() {
       type: "Full-Stack E-Commerce Project",
       icon: ShoppingBag,
       description:
-        "Designed and developed a complete footwear e-commerce application with customer and admin functionality. Implemented authentication, product management, shopping cart, addresses, checkout, and order management.",
+        "Designed and developed a complete footwear e-commerce platform with customer and admin functionality, including authentication, product management, shopping cart, address management, checkout, stock management, and order processing.",
       skills: [
         "JWT Authentication",
         "Product CRUD",
         "Shopping Cart",
-        "Orders",
+        "Order Management",
+        "Stock Management",
         "Admin Dashboard",
-      ],
-    },
-
-    // ================= IRONMIND =================
-    {
-      year: "2026",
-      title: "IronMind",
-      type: "MERN Stack Fitness Application",
-      icon: Dumbbell,
-      description:
-        "Built a full-stack fitness tracking application using the MERN stack for creating and managing workouts, tracking exercises, sets, reps, weight, rest time, workout history, and fitness progress.",
-      skills: [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "JWT Authentication",
-        "Workout Tracking",
       ],
     },
 
@@ -69,7 +73,7 @@ function Experience() {
       type: "Professional Training · CodeMe",
       icon: Server,
       description:
-        "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React, Node.js, Express.js, and MongoDB, with practical experience in REST APIs, authentication, database integration, and deployment.",
+        "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React, Node.js, Express.js, and MongoDB, with practical experience in REST APIs, authentication, Redux Toolkit, and deployment.",
       skills: [
         "React",
         "Node.js",
@@ -80,21 +84,39 @@ function Experience() {
       ],
     },
 
+    // ================= AI INTEGRATION =================
+    {
+      year: "2026",
+      title: "AI Integration",
+      type: "Current Learning & Development",
+      icon: BrainCircuit,
+      description:
+        "Expanding my full-stack development capabilities by learning how to integrate AI APIs into web applications to build intelligent assistants, personalized experiences, and practical AI-powered features.",
+      skills: [
+        "AI APIs",
+        "OpenAI API",
+        "Prompt Integration",
+        "API Integration",
+        "AI Assistants",
+        "Automation",
+      ],
+    },
+
     // ================= DEVELOPMENT JOURNEY =================
     {
       year: "2025 — 2026",
-      title: "Frontend & Backend Learning",
-      type: "Development Journey",
-      icon: Server,
+      title: "Web Development Journey",
+      type: "Continuous Learning",
+      icon: Code2,
       description:
-        "Built a strong foundation in web development by working with modern frontend and backend technologies, REST APIs, database operations, responsive UI development, and version control.",
+        "Built a strong foundation in modern web development through continuous learning and hands-on projects, working with frontend technologies, backend APIs, databases, responsive UI development, version control, and deployment.",
       skills: [
         "JavaScript",
+        "React",
         "REST APIs",
         "Axios",
         "Tailwind CSS",
         "Git & GitHub",
-        "Figma",
       ],
     },
   ];
@@ -167,9 +189,9 @@ function Experience() {
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
-            My journey has been focused on learning, gaining practical
-            experience, building real-world applications, and continuously
-            improving my full-stack development skills.
+            My journey combines professional training, hands-on development
+            experience, real-world projects, and continuous learning across
+            modern full-stack and AI integration technologies.
           </p>
         </motion.div>
 
@@ -337,13 +359,14 @@ function Experience() {
                 <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-orange-500" />
 
                 <p className="text-sm font-semibold text-orange-400">
-                  Currently Learning & Building
+                  Currently Building & Learning
                 </p>
               </div>
 
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Continuously improving my skills through practical projects
-                and real-world development.
+                Building full-stack MERN applications while expanding my
+                capabilities with AI API integration and modern development
+                practices.
               </p>
             </div>
 
@@ -352,7 +375,6 @@ function Experience() {
               className="group inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-colors hover:text-orange-300"
             >
               View Projects
-
               <ArrowUpRight
                 size={17}
                 className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
