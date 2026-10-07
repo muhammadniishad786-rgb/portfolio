@@ -76,6 +76,7 @@ function Experience() {
         "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React, Node.js, Express.js, and MongoDB, with practical experience in REST APIs, authentication, Redux Toolkit, and deployment.",
       skills: [
         "React",
+        "Next",
         "Node.js",
         "Express.js",
         "MongoDB",
