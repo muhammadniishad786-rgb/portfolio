@@ -30,40 +30,43 @@ function Projects() {
       category: "AI-Powered Fitness Platform",
 
       description:
-        "An AI-powered fitness and workout tracking platform built with the MERN stack. IronMind allows users to create and manage workouts, track exercises, record sets, reps and weight, monitor fitness progress, and receive personalized AI-powered fitness guidance.",
+        "An AI-powered fitness tracking platform built with Next.js, React, TypeScript, Node.js, Express.js, and MongoDB. IronMind enables users to manage workouts, track exercises, record sets, reps and weights, monitor fitness progress, and receive AI-powered fitness guidance through the Gemini API.",
 
       image: "/IronMindLogo.png",
 
       technologies: [
-        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit",
         "Node.js",
         "Express.js",
         "MongoDB",
         "Mongoose",
-        "Redux Toolkit",
-        "Tailwind CSS",
         "JWT",
-        "Gemini-Api"
+        "Gemini API",
       ],
 
       features: [
+        "User Registration & Login",
         "JWT Authentication",
         "Protected Routes",
+        "User Profile Management",
         "Workout Management",
         "Exercise Tracking",
-        "Sets & Reps Tracking",
+        "Sets, Reps & Weight Tracking",
         "Workout Completion",
         "Progress Statistics",
         "Personal Records",
         "AI Fitness Assistant",
-        "Personalized AI Guidance",
+        "Gemini API Integration",
         "REST API Integration",
         "Responsive Dashboard",
       ],
 
-      liveLink: "https://ironmind-1-ged6.onrender.com",
+      liveLink: "https://iron-mind-lime.vercel.app/dashboard",
 
-      githubLink: "https://github.com/muhammadniishad786-rgb/ironMind",
+      githubLink: "https://github.com/muhammadniishad786-rgb/Iron-Mind",
     },
 
     {
