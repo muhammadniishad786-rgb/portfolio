@@ -303,7 +303,7 @@ function Contact() {
                     <motion.a
                       whileHover={{ y: -5, scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      href="YOUR_INSTAGRAM_URL"
+                      href="https://www.instagram.com/muhammad.nishad_/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"

@@ -32,18 +32,21 @@ function Experience() {
     {
       year: "2026",
       title: "IronMind",
-      type: "Featured MERN + AI Integration Project",
+      type: "Full-Stack Fitness Platform · MERN + Next.js + AI",
       icon: Dumbbell,
       description:
-        "Built a full-stack fitness and workout tracking platform using the MERN stack, featuring workout management, exercise tracking, sets, reps, weight, rest time, workout history, progress analytics, and AI-powered fitness guidance.",
+        "Developed a full-stack fitness and workout tracking platform with workout management, exercise tracking, sets, reps, weight tracking, workout history, progress analytics, and personal records. Built the original application using React.js, Node.js, Express.js, and MongoDB, and explored a Next.js frontend with TypeScript. Integrated the Gemini AI API to provide AI-powered fitness guidance and intelligent workout assistance.",
       skills: [
-        "React",
+        "React.js",
+        "Next.js",
+        "TypeScript",
         "Node.js",
         "Express.js",
         "MongoDB",
         "Redux Toolkit",
         "JWT Authentication",
-        "Workout Tracking",
+        "REST APIs",
+        "Gemini AI API",
         "AI Integration",
       ],
     },
@@ -55,8 +58,12 @@ function Experience() {
       type: "Full-Stack E-Commerce Project",
       icon: ShoppingBag,
       description:
-        "Designed and developed a complete footwear e-commerce platform with customer and admin functionality, including authentication, product management, shopping cart, address management, checkout, stock management, and order processing.",
+        "Designed and developed a full-stack footwear e-commerce platform with customer and admin functionality, including authentication, product management, shopping cart, address management, checkout, stock management, and order processing using the MERN stack.",
       skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
         "JWT Authentication",
         "Product CRUD",
         "Shopping Cart",
@@ -73,15 +80,18 @@ function Experience() {
       type: "Professional Training · CodeMe",
       icon: Server,
       description:
-        "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React, Node.js, Express.js, and MongoDB, with practical experience in REST APIs, authentication, Redux Toolkit, and deployment.",
+        "Completed a 5-month MERN Stack Development course focused on building full-stack web applications using React.js, Node.js, Express.js, and MongoDB, with practical learning in REST APIs, authentication, Redux Toolkit, Git, and deployment. Also expanded knowledge of Next.js and TypeScript.",
       skills: [
-        "React",
-        "Next",
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "TypeScript",
         "Node.js",
         "Express.js",
         "MongoDB",
         "Redux Toolkit",
         "REST APIs",
+        "Git & GitHub",
       ],
     },
 
@@ -92,14 +102,14 @@ function Experience() {
       type: "Current Learning & Development",
       icon: BrainCircuit,
       description:
-        "Expanding my full-stack development capabilities by learning how to integrate AI APIs into web applications to build intelligent assistants, personalized experiences, and practical AI-powered features.",
+        "Expanding full-stack development skills by integrating AI APIs into web applications. Exploring Gemini AI, prompt design, API integration, and AI-powered assistants to build intelligent and interactive application features.",
       skills: [
+        "Gemini AI API",
         "AI APIs",
-        "OpenAI API",
-        "Prompt Integration",
+        "Prompt Engineering Basics",
         "API Integration",
         "AI Assistants",
-        "Automation",
+        "Intelligent Web Applications",
       ],
     },
 
@@ -110,10 +120,12 @@ function Experience() {
       type: "Continuous Learning",
       icon: Code2,
       description:
-        "Built a strong foundation in modern web development through continuous learning and hands-on projects, working with frontend technologies, backend APIs, databases, responsive UI development, version control, and deployment.",
+        "Built a foundation in modern web development through continuous learning and hands-on projects, working with frontend interfaces, backend APIs, database integration, responsive UI development, version control, and application deployment.",
       skills: [
+        "HTML5",
+        "CSS3",
         "JavaScript",
-        "React",
+        "React.js",
         "REST APIs",
         "Axios",
         "Tailwind CSS",
@@ -199,8 +211,6 @@ function Experience() {
         {/* ================= TIMELINE ================= */}
 
         <div className="relative">
-          {/* Timeline Line */}
-
           <div className="absolute left-[20px] top-0 hidden h-full w-px bg-gradient-to-b from-orange-500/50 via-white/10 to-transparent sm:block" />
 
           <div className="space-y-8">
@@ -241,8 +251,6 @@ function Experience() {
                   {/* ================= EXPERIENCE CARD ================= */}
 
                   <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-orange-500/30 hover:bg-orange-500/[0.03] sm:p-9">
-                    {/* Glow */}
-
                     <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-orange-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                     <div className="relative">
@@ -250,8 +258,6 @@ function Experience() {
 
                       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                         <div className="flex gap-4">
-                          {/* Icon */}
-
                           <motion.div
                             whileHover={{
                               rotate: 6,
@@ -266,21 +272,15 @@ function Experience() {
                           </motion.div>
 
                           <div>
-                            {/* Type */}
-
                             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400">
                               {experience.type}
                             </p>
-
-                            {/* Title */}
 
                             <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
                               {experience.title}
                             </h3>
                           </div>
                         </div>
-
-                        {/* Year */}
 
                         <span className="w-fit rounded-full border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold text-gray-400">
                           {experience.year}
@@ -365,9 +365,9 @@ function Experience() {
               </div>
 
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Building full-stack MERN applications while expanding my
-                capabilities with AI API integration and modern development
-                practices.
+                Building full-stack applications using React.js, Next.js,
+                Node.js, Express.js, and MongoDB while expanding my skills
+                in TypeScript and Gemini AI API integration.
               </p>
             </div>
 
