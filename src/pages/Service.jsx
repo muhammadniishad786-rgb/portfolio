@@ -9,48 +9,50 @@ import {
 import { motion } from "framer-motion";
 
 function Services() {
-  const services = [
-    {
-      number: "01",
-      icon: Code2,
-      title: "Full-Stack Development",
-      description:
-        "Building complete web applications with React, Node.js, Express.js and MongoDB, from frontend interfaces to backend APIs.",
-      tags: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      number: "02",
-      icon: Server,
-      title: "Frontend Development",
-      description:
-        "Creating responsive, modern and user-friendly interfaces using React, Tailwind CSS and reusable components.",
-      tags: ["React", "Tailwind", "UI/UX"],
-    },
-    {
-      number: "03",
-      icon: Database,
-      title: "Backend & APIs",
-      description:
-        "Developing secure REST APIs with Node.js and Express.js, including authentication, authorization and database integration.",
-      tags: ["Node.js", "Express", "REST API"],
-    },
-    {
-      number: "04",
-      icon: BrainCircuit,
-      title: "AI Integration",
-      description:
-        "Integrating AI-powered features into modern web applications using AI APIs to create intelligent assistants, personalized experiences and workflow automation.",
-      tags: ["AI APIs", "OpenAI", "Automation"],
-    },
-    {
-      number: "05",
-      icon: Rocket,
-      title: "Deployment & Integration",
-      description:
-        "Connecting frontend and backend applications and deploying full-stack projects for real-world use.",
-      tags: ["Git", "Render", "Deployment"],
-    },
-  ];
+  
+const services = [
+  {
+    number: "01",
+    icon: Code2,
+    title: "Full-Stack Development",
+    description:
+      "Building complete web applications with React, Next.js, Node.js, Express.js and MongoDB, from frontend interfaces to backend APIs.",
+    tags: ["React", "Next.js", "Node.js", "MongoDB"],
+  },
+  {
+    number: "02",
+    icon: Server,
+    title: "Frontend Development",
+    description:
+      "Creating responsive, modern and user-friendly interfaces using React, Next.js, Tailwind CSS and reusable components.",
+    tags: ["React", "Next.js", "Tailwind", "UI/UX"],
+  },
+  {
+    number: "03",
+    icon: Database,
+    title: "Backend & APIs",
+    description:
+      "Developing secure REST APIs with Node.js and Express.js, including authentication, authorization and database integration.",
+    tags: ["Node.js", "Express", "REST API"],
+  },
+  {
+    number: "04",
+    icon: BrainCircuit,
+    title: "AI Integration",
+    description:
+      "Integrating AI-powered features into modern web applications using AI APIs to create intelligent assistants, personalized experiences and workflow automation.",
+    tags: ["AI APIs", "Gemini API", "Automation"],
+  },
+  {
+    number: "05",
+    icon: Rocket,
+    title: "Deployment & Integration",
+    description:
+      "Connecting frontend and backend applications and deploying full-stack projects for real-world use.",
+    tags: ["Git", "Render", "Deployment"],
+  },
+];
+
 
   /*
    * Main horizontal animation
