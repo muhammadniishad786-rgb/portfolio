@@ -49,9 +49,10 @@ function Skills() {
       icon: Database,
       title: "Database",
       description:
-        "Designing and managing application data using MongoDB, Mongoose and structured data models.",
+        "Designing and managing application data using MongoDB, Mongoose and structured data models, Also using SQL",
       skills: [
         "MongoDB",
+        "SQL",
         "Mongoose",
         "CRUD Operations",
         "Data Modeling",
@@ -367,8 +368,7 @@ function Skills() {
               </p>
 
               <p className="mt-2 text-sm text-gray-500">
-                React • Node.js • Express • MongoDB • Redux Toolkit • AI
-                Integration
+                React • Next.js • Node.js • Express • MongoDB • SQL
               </p>
             </div>
 
