@@ -396,3 +396,334 @@ function Skills() {
 }
 
 export default Skills;
+
+// import { motion } from "framer-motion";
+// import {
+//   Code2,
+//   Palette,
+//   Smartphone,
+//   Layers,
+//   Globe,
+//   Server,
+//   Database,
+//   ShieldCheck,
+//   Brain,
+//   Sparkles,
+//   GitBranch,
+//   Terminal,
+//   Workflow,
+//   Monitor,
+//   Package,
+//   Bot,
+//   FileCode2,
+//   Cloud,
+//   Send,
+//   Settings,
+//   Cpu,
+//   Boxes,
+//   Wrench,
+//   Rocket,
+// } from "lucide-react";
+
+// const skillCategories = [
+//   {
+//     title: "Frontend Development",
+//     subtitle: "Creating modern user interfaces",
+//     icon: Monitor,
+//     skills: [
+//       { name: "HTML5", icon: Code2 },
+//       { name: "CSS3", icon: Palette },
+//       { name: "JavaScript", icon: FileCode2 },
+//       { name: "TypeScript", icon: Code2 },
+//       { name: "React.js", icon: Layers },
+//       { name: "Next.js", icon: Globe },
+//       { name: "Tailwind CSS", icon: Palette },
+//       { name: "Redux Toolkit", icon: Workflow },
+//       { name: "Responsive UI", icon: Smartphone },
+//     ],
+//   },
+//   {
+//     title: "Backend Development",
+//     subtitle: "Building APIs and server logic",
+//     icon: Server,
+//     skills: [
+//       { name: "Node.js", icon: Terminal },
+//       { name: "Express.js", icon: Server },
+//       { name: "REST APIs", icon: Send },
+//       { name: "JWT Authentication", icon: ShieldCheck },
+//       { name: "Middleware", icon: Workflow },
+//       { name: "API Integration", icon: Package },
+//     ],
+//   },
+//   {
+//     title: "Database",
+//     subtitle: "Managing application data",
+//     icon: Database,
+//     skills: [
+//       { name: "MongoDB", icon: Database },
+//       { name: "Mongoose", icon: Layers },
+//       { name: "CRUD Operations", icon: Settings },
+//       { name: "Data Modeling", icon: Boxes },
+//     ],
+//   },
+//   {
+//     title: "AI Integration",
+//     subtitle: "Connecting applications with AI",
+//     icon: Brain,
+//     skills: [
+//       { name: "Gemini API", icon: Sparkles },
+//       { name: "AI Chatbot", icon: Bot },
+//       { name: "Prompt Engineering", icon: Brain },
+//       { name: "Third-Party APIs", icon: Cloud },
+//     ],
+//   },
+//   {
+//     title: "Tools & Workflow",
+//     subtitle: "Tools I use to build and deploy",
+//     icon: Terminal,
+//     skills: [
+//       { name: "Git", icon: GitBranch },
+//       { name: "GitHub", icon: GitBranch },
+//       { name: "VS Code", icon: Code2 },
+//       { name: "Postman", icon: Send },
+//       { name: "NPM", icon: Package },
+//       { name: "Vercel", icon: Cloud },
+//       { name: "Render", icon: Rocket },
+//     ],
+//   },
+// ];
+
+// const containerVariants = {
+//   hidden: {},
+//   visible: {
+//     transition: {
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
+
+// const cardVariants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 35,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.55,
+//       ease: "easeOut",
+//     },
+//   },
+// };
+
+// const skillVariants = {
+//   hidden: {
+//     opacity: 0,
+//     scale: 0.8,
+//     y: 10,
+//   },
+//   visible: {
+//     opacity: 1,
+//     scale: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.35,
+//       ease: "easeOut",
+//     },
+//   },
+// };
+
+// export default function Skills() {
+//   return (
+//     <section
+//       id="skills"
+//       className="relative isolate overflow-hidden bg-[#050807] px-5 py-24 text-white sm:px-8 md:py-32"
+//     >
+//       {/* Background effects */}
+//       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+//         <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-emerald-500/10 blur-[120px]" />
+
+//         <div className="absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-cyan-500/10 blur-[130px]" />
+
+//         <div
+//           className="absolute inset-0 opacity-[0.04]"
+//           style={{
+//             backgroundImage:
+//               "linear-gradient(rgba(16,185,129,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.5) 1px, transparent 1px)",
+//             backgroundSize: "45px 45px",
+//           }}
+//         />
+//       </div>
+
+//       <div className="relative mx-auto max-w-7xl">
+//         {/* Section heading */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, amount: 0.3 }}
+//           transition={{ duration: 0.7 }}
+//           className="mb-16 text-center"
+//         >
+//           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-4 py-2 font-mono text-xs tracking-[0.2em] text-emerald-300">
+//             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399]" />
+//             MY TECH ARSENAL
+//           </div>
+
+//           <h2 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
+//             Skills &{" "}
+//             <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">
+//               Technologies
+//             </span>
+//           </h2>
+
+//           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base">
+//             Technologies and tools I use to build modern full-stack
+//             applications and AI-powered experiences.
+//           </p>
+
+//           <div className="mx-auto mt-7 h-[2px] w-28 rounded-full bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
+//         </motion.div>
+
+//         {/* Animated skill cards */}
+//         <motion.div
+//           variants={containerVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.08 }}
+//           className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+//         >
+//           {skillCategories.map((category, index) => {
+//             const CategoryIcon = category.icon;
+
+//             return (
+//               <motion.article
+//                 key={category.title}
+//                 variants={cardVariants}
+//                 whileHover={{ y: -7 }}
+//                 className="group relative overflow-hidden rounded-2xl border border-emerald-400/15 bg-[#0a100e]/90 p-6 transition-colors duration-300 hover:border-emerald-300/45 hover:shadow-[0_0_35px_rgba(16,185,129,0.1)] sm:p-7"
+//               >
+//                 {/* Card glow */}
+//                 <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-emerald-400/[0.06] blur-3xl transition-all duration-500 group-hover:bg-emerald-400/[0.15]" />
+
+//                 {/* Category heading */}
+//                 <div className="relative mb-7 flex items-center gap-4">
+//                   <motion.div
+//                     whileHover={{
+//                       rotate: [0, -8, 8, 0],
+//                       scale: 1.1,
+//                     }}
+//                     transition={{ duration: 0.4 }}
+//                     className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-emerald-300/20 bg-emerald-400/10"
+//                   >
+//                     <CategoryIcon
+//                       size={27}
+//                       strokeWidth={1.7}
+//                       className="text-emerald-300"
+//                     />
+//                   </motion.div>
+
+//                   <div>
+//                     <h3 className="text-lg font-bold text-white transition-colors group-hover:text-emerald-300 sm:text-xl">
+//                       {category.title}
+//                     </h3>
+
+//                     <p className="mt-1 text-xs text-gray-500">
+//                       {category.subtitle}
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 {/* Terminal label */}
+//                 <div className="mb-4 flex items-center justify-between border-b border-white/[0.07] pb-3 font-mono text-[10px] tracking-[0.15em] text-emerald-400/70">
+//                   <span>
+//                     STACK_{String(index + 1).padStart(2, "0")}
+//                   </span>
+//                   <span>{category.skills.length} SKILLS</span>
+//                 </div>
+
+//                 {/* Individual skill icons */}
+//                 <motion.div
+//                   variants={containerVariants}
+//                   className="grid grid-cols-2 gap-3"
+//                 >
+//                   {category.skills.map((skill) => {
+//                     const SkillIcon = skill.icon;
+
+//                     return (
+//                       <motion.div
+//                         key={skill.name}
+//                         variants={skillVariants}
+//                         whileHover={{
+//                           scale: 1.05,
+//                           y: -3,
+//                         }}
+//                         className="group/skill relative flex min-h-[88px] flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-white/[0.07] bg-white/[0.025] px-2 py-4 text-center transition-all duration-300 hover:border-emerald-300/40 hover:bg-emerald-300/[0.06]"
+//                       >
+//                         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-emerald-300/[0.06] to-transparent transition-transform duration-700 group-hover/skill:translate-x-full" />
+
+//                         <motion.div
+//                           whileHover={{
+//                             rotate: [0, -5, 5, 0],
+//                             scale: 1.15,
+//                           }}
+//                           transition={{ duration: 0.3 }}
+//                           className="relative"
+//                         >
+//                           <SkillIcon
+//                             size={25}
+//                             strokeWidth={1.7}
+//                             className="text-gray-400 transition-colors duration-300 group-hover/skill:text-emerald-300"
+//                           />
+//                         </motion.div>
+
+//                         <span className="relative text-xs font-medium leading-5 text-gray-300 transition-colors group-hover/skill:text-white">
+//                           {skill.name}
+//                         </span>
+//                       </motion.div>
+//                     );
+//                   })}
+//                 </motion.div>
+
+//                 {/* Animated bottom accent */}
+//                 <div className="mt-7 h-px w-full overflow-hidden bg-white/[0.06]">
+//                   <motion.div
+//                     initial={{ width: "0%" }}
+//                     whileInView={{ width: "100%" }}
+//                     viewport={{ once: true }}
+//                     transition={{
+//                       duration: 0.9,
+//                       delay: index * 0.1,
+//                     }}
+//                     className="h-full bg-gradient-to-r from-emerald-400 to-cyan-400"
+//                   />
+//                 </div>
+//               </motion.article>
+//             );
+//           })}
+//         </motion.div>
+
+//         {/* Terminal footer */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 15 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//           className="mt-14 text-center font-mono text-xs text-gray-500"
+//         >
+//           <span className="text-emerald-400">nishad@dev</span>
+//           <span className="text-gray-600">:</span>
+//           <span className="text-cyan-300">~</span>
+//           <span className="text-gray-600">$ </span>
+//           <span>always_learning --build --improve</span>
+
+//           <motion.span
+//             animate={{ opacity: [1, 0, 1] }}
+//             transition={{ duration: 1, repeat: Infinity }}
+//             className="ml-1 inline-block h-3 w-[6px] translate-y-[2px] bg-emerald-400"
+//           />
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
