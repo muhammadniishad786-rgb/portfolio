@@ -30,7 +30,7 @@ function Projects() {
       category: "AI-Powered Fitness Platform",
 
       description:
-        "An AI-powered fitness tracking platform built with Next.js, React, TypeScript, Node.js, Express.js, and MongoDB. IronMind enables users to manage workouts, track exercises, record sets, reps and weights, monitor fitness progress, and receive AI-powered fitness guidance through the Gemini API.",
+        "An AI-powered fitness tracking platform built with Next.js, React, TypeScript, Node.js, Express.js, and MongoDB. IronMind enables users to manage workouts, track exercises, record sets, reps and weights, monitor fitness progress, and receive AI-powered fitness guidance through the Gemini API",
 
       image: "/IronMindLogo.png",
 

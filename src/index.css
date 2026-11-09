@@ -2,6 +2,257 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
+
+
+/* Main cinematic entrance */
+@keyframes title-arrive {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 70px, 0) scale(0.88);
+    filter: blur(16px);
+  }
+
+  60% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, -5px, 0) scale(1.015);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Gentle floating movement */
+@keyframes title-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Electric glow pulses */
+@keyframes electric-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(0, 255, 156, 0.25),
+      0 0 24px rgba(0, 255, 156, 0.1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.9),
+      0 0 12px #00ff9c,
+      0 0 32px rgba(0, 255, 156, 0.8),
+      0 0 65px rgba(0, 217, 255, 0.3);
+  }
+}
+
+/* Brief electrical flicker */
+@keyframes electric-flicker {
+  0%, 91%, 94%, 97%, 100% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0.65;
+  }
+
+  93% {
+    opacity: 1;
+    filter: brightness(2.2);
+  }
+
+  95% {
+    opacity: 0.8;
+  }
+
+  96% {
+    opacity: 1;
+    filter: brightness(1.8);
+  }
+}
+
+/* Lightning streak travels across the title */
+@keyframes lightning-sweep {
+  0%, 70% {
+    left: -40%;
+    opacity: 0;
+  }
+
+  74% {
+    opacity: 1;
+  }
+
+  88% {
+    left: 110%;
+    opacity: 0.8;
+  }
+
+  90%, 100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+/* Tiny energy sparks around the title */
+@keyframes spark {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+
+/* Hide the default cursor only on desktop devices */
+@media (pointer: fine) {
+  body,
+  body * {
+    cursor: none !important;
+  }
+
+  .custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #39ff14;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99999;
+    transition:
+      width 0.2s ease,
+      height 0.2s ease,
+      border-color 0.2s ease,
+      opacity 0.2s ease;
+    box-shadow:
+      0 0 8px rgba(57, 255, 20, 0.45),
+      inset 0 0 8px rgba(57, 255, 20, 0.12);
+  }
+
+  .custom-cursor-ring::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 1px dashed rgba(57, 255, 20, 0.45);
+    border-radius: 50%;
+    animation: cursor-spin 8s linear infinite;
+  }
+
+  .custom-cursor-dot {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #39ff14;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100000;
+    box-shadow: 0 0 10px #39ff14;
+  }
+
+  .custom-cursor-ring.cursor-hover {
+    width: 52px;
+    height: 52px;
+    border-color: #00f5ff;
+    box-shadow:
+      0 0 16px rgba(0, 245, 255, 0.65),
+      inset 0 0 12px rgba(0, 245, 255, 0.15);
+  }
+
+  .custom-cursor-ring.cursor-hover::before {
+    border-color: rgba(0, 245, 255, 0.7);
+  }
+}
+
+@keyframes cursor-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep the normal cursor on touch devices */
+@media (pointer: coarse) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none;
+  }
+}
+
+
+.title-entrance {
+  opacity: 0;
+  animation: title-arrive 1.2s cubic-bezier(0.16, 1, 0.3, 1)
+    0.25s forwards;
+}
+
+.title-float {
+  animation: title-float 4s ease-in-out 1.5s infinite;
+}
+
+.title-electric {
+  position: relative;
+  isolation: isolate;
+  animation:
+    electric-pulse 3s ease-in-out 1.5s infinite,
+    electric-flicker 7s linear 2s infinite;
+}
+
+.title-electric::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -15%;
+  bottom: -15%;
+  left: -40%;
+  width: 22%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(255, 255, 255, 0.95) 45%,
+    #00d9ff 52%,
+    transparent
+  );
+  filter: blur(5px);
+  transform: skewX(-20deg);
+  animation: lightning-sweep 6s ease-in-out 2s infinite;
+}
+
+.title-spark {
+  animation: spark 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-entrance,
+  .title-float,
+  .title-electric,
+  .title-electric::after,
+  .title-spark {
+    animation: none !important;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+
 :root {
   font-family: "Manrope", sans-serif;
   color: white;
